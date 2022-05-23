@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket-Thuisbezorgd</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+    <!-- Sushi Scherm -->
+        <div class="sushi">
+        <div class="logo"></div>
+        <div class="box">
+        </div>
+        <div class="wapenkamer">
+            <li class="nav-item">- Sushi -</li>
+        </div>
+        <div class="middel-button">
+            <button class="select-button" onclick="voedsel('Maki', '27')">Leveren</button>
+        </div>
+        <div class="rechts-button">
+            <button class="select-button" onclick="voedsel('Sashimi', '64')">Leveren</button>
+        </div>
+        <div class="links-button">
+            <button class="select-button" onclick="voedsel('Poke Bowl', '30')">Leveren</button>
+        </div>
+        <div class="boxje">
+            <div class="item">
+                <div class="item-text-line">
+                    <div class="item-left"><b>Open bestellingen:</b></div>
+                    <div class="item-right">30</div>
+                    <div class="item-left"><b>Gerecht:</b></div>
+                    <div class="item-right">Poke Bowl</div>
+                </div>
+            </div>
+        </div>
+        <div class="boxje2">
+            <div class="item2">
+                <div class="item-text-line2">
+                    <div class="item-left2"><b>Open bestellingen:</b></div>
+                    <div class="item-right2">64</div>
+                    <div class="item-left2"><b>Gerecht:</b></div>
+                    <div class="item-right2">Sashimi</div>
+                </div>
+            </div>
+        </div>
+        <div class="boxje3">
+            <div class="item3">
+                <div class="item-text-line3">
+                    <div class="item-left3"><b>Open bestellingen:</b></div>
+                    <div class="item-right3">27</div>
+                    <div class="item-left3"><b>Gerecht:</b></div>
+                    <div class="item-right3">Maki</div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Pasta Scherm -->
+        <div class="pasta">
+            <div class="logo"></div>
+            <div class="box">
+            </div>
+            <div class="wapenkamer">
+                <li class="nav-item">- Pasta -</li>
+            </div>
+        <div class="middel-button">
+            <button class="select-button" onclick="voedsel('Pasta Pesto', '13')">Leveren</button>
+        </div>
+        <div class="rechts-button">
+            <button class="select-button" onclick="voedsel('Pasta Carbonara', '47')">Leveren</button>
+        </div>
+        <div class="links-button">
+            <button class="select-button" onclick="voedsel('Pasta Bolongese', '21')">Leveren</button>
+        </div>
+            <div class="boxje">
+                <div class="item">
+                    <div class="item-text-line">
+                        <div class="item-left"><b>Open bestellingen:</b></div>
+                        <div class="item-right">21</div>
+                        <div class="item-left"><b>Pasta:</b></div>
+                        <div class="item-right">Bolognese</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxje2">
+                <div class="item2">
+                    <div class="item-text-line2">
+                        <div class="item-left2"><b>Open bestellingen:</b></div>
+                        <div class="item-right2">47</div>
+                        <div class="item-left2"><b>Pasta:</b></div>
+                        <div class="item-right2">Carbonara</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxje3">
+                <div class="item3">
+                    <div class="item-text-line3">
+                        <div class="item-left3"><b>Open bestellingen:</b></div>
+                        <div class="item-right3">13</div>
+                        <div class="item-left3"><b>Pasta:</b></div>
+                        <div class="item-right3">Pesto</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <!-- Pizza Scherm -->
+            <div class="pizza">
+                <div class="logo"></div>
+                <div class="box">
+                </div>
+                <div class="wapenkamer">
+                    <li class="nav-item">- Pizza -</li>
+                </div>
+                <div class="middel-button">
+                    <button class="select-button" onclick="voedsel('Pizza 4 Kazen', '3')">Leveren</button>
+                </div>
+                <div class="rechts-button">
+                    <button class="select-button" onclick="voedsel('Pizza Pepperoni', '38')">Leveren</button>
+                </div>
+                <div class="links-button">
+                    <button class="select-button" onclick="voedsel('Pizza Margherita', '45')">Leveren</button>
+                </div>
+                <div class="boxje">
+                    <div class="item">
+                        <div class="item-text-line">
+                            <div class="item-left"><b>Open bestellingen:</b></div>
+                            <div class="item-right">45</div>
+                            <div class="item-left"><b>Pizza:</b></div>
+                            <div class="item-right">Margherita</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxje2">
+                    <div class="item2">
+                        <div class="item-text-line2">
+                            <div class="item-left2"><b>Open bestellingen:</b></div>
+                            <div class="item-right2">38</div>
+                            <div class="item-left2"><b>Pizza:</b></div>
+                            <div class="item-right2">Peperoni</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxje3">
+                    <div class="item3">
+                        <div class="item-text-line3">
+                            <div class="item-left3"><b>Open bestellingen:</b></div>
+                            <div class="item-right3">57</div>
+                            <div class="item-left3"><b>Pizza:</b></div>
+                            <div class="item-right3">4 Kazen</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        <!-- Selecteren Scherm -->
+            <div class="selectreen">
+            <div class="logo"></div>
+            <div class="box">
+            </div>
+            <div class="wapenkamer">
+                <li class="nav-item2">- Selecteer Restaurant -</li>
+            </div>
+            <div class="middel-button">
+                <button class="select-button" onclick="showsushi()">Sushi Restaurant</button>
+            </div>
+            <div class="rechts-button">
+                <button class="select-button" onclick="showpizza()">Pizza Restaurant</button>
+            </div>
+            <div class="links-button">
+                <button class="select-button" onclick="showpasta()">Pasta Restaurant</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function showsushi() {
+        $(".selectreen").fadeOut();
+        $(".sushi").fadeIn();
+    }
+    function showpizza() {
+        $(".selectreen").fadeOut();
+        $(".pizza").fadeIn();
+    }
+    function showpasta() {
+        $(".selectreen").fadeOut();
+        $(".pasta").fadeIn();
+    }
+    function voedsel(niga, niga2) {
+        $(".container").fadeOut();
+        $(".sushi").fadeOut();
+        $(".pizza").fadeOut();
+        $(".pasta").fadeOut();
+        $(".selectreen").fadeOut();
+        $.post('http://Rocket-Thuisbezorgd/run', JSON.stringify({
+            soort: niga,
+            aantal: niga2
+        }))
+    }
+</script>
+<script src="./main.js"></script>
+
+</html>
