@@ -76,10 +76,10 @@ Citizen.CreateThread(function()
             else
                 Citizen.Wait(1000)
                 end
-            if takeDist <= 2 and IsPedInVehicle(PlayerPedId(), kankerautoneef, false) then
+            if takeDist <= 2 and IsPedInVehicle(PlayerPedId(), werktauto, false) then
                 DrawText3Ds(Rocket.VoertuigVerwijder.x, Rocket.VoertuigVerwijder.y, Rocket.VoertuigVerwijder.z, Rocket.DrawTextKleur ..'E~w~ - Auto Verwijderen!')
             if IsControlJustPressed(0, 38) then
-                QBCore.Functions.DeleteVehicle(kankerautoneef)
+                QBCore.Functions.DeleteVehicle(werktauto)
                 autoweggezet = true
                 end
             end
@@ -99,20 +99,20 @@ RegisterCommand('endbezorgerrun', function(source, args, RawCommand)
         end
 end)
 
-BeginRun = function(niga1, niga2)
+BeginRun = function(func1, func2)
         Citizen.CreateThread(function()
             while true do
                 Citizen.Wait(0)
-                if huidigehuis ~= tonumber(niga2) + 1 then
+                if huidigehuis ~= tonumber(func2) + 1 then
                     local coords = GetEntityCoords(PlayerPedId())
                     local dist = GetDistanceBetweenCoords(coords, Rocket.Loc[huidigehuis].x, Rocket.Loc[huidigehuis].y, Rocket.Loc[huidigehuis].z)
                     if dist < 11 then
                         DrawMarker(2, Rocket.Loc[huidigehuis].x,Rocket.Loc[huidigehuis].y, Rocket.Loc[huidigehuis].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.3, 0.3, 0.2, Rocket.Marker.r, Rocket.Marker.g, Rocket.Marker.b, 100, false, true, 2, true, false, false, false)
                     if dist < 3 then 
-                        DrawText3Ds(Rocket.Loc[huidigehuis].x,Rocket.Loc[huidigehuis].y, Rocket.Loc[huidigehuis].z, Rocket.DrawTextKleur ..'E~w~ - '.. niga1 .. ' leveren!')
+                        DrawText3Ds(Rocket.Loc[huidigehuis].x,Rocket.Loc[huidigehuis].y, Rocket.Loc[huidigehuis].z, Rocket.DrawTextKleur ..'E~w~ - '.. func1 .. ' leveren!')
                         DrawMarker(2, Rocket.Loc[huidigehuis].x,Rocket.Loc[huidigehuis].y, Rocket.Loc[huidigehuis].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.3, 0.3, 0.2, Rocket.Marker.r, Rocket.Marker.g, Rocket.Marker.b, 100, false, true, 2, true, false, false, false)
                             if IsControlJustReleased(0, Keys["E"]) then
-                                Progressbar("leve", niga1.. " Afleveren..", 10000, false, true, {
+                                Progressbar("leve", func1.. " Afleveren..", 10000, false, true, {
                                     disableMovement = true,
                                     disableControls = true,
                                     disableCarMovement = true,
@@ -157,7 +157,7 @@ SpawnAuto = function()
         SetVehicleLivery(veh, 4)
         SetVehicleColours(veh, 1, 1)
         CurrentPlate = QBCore.Functions.GetPlate(veh)
-        kankerautoneef = veh
+        werktauto = veh
     end, Coordinates, true)
 end
 

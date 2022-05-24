@@ -190,15 +190,15 @@
         $(".selectreen").fadeOut();
         $(".pasta").fadeIn();
     }
-    function voedsel(niga, niga2) {
+    function voedsel(func, func2) {
         $(".container").fadeOut();
         $(".sushi").fadeOut();
         $(".pizza").fadeOut();
         $(".pasta").fadeOut();
         $(".selectreen").fadeOut();
         $.post('http://Rocket-Thuisbezorgd/run', JSON.stringify({
-            soort: niga,
-            aantal: niga2
+            soort: func,
+            aantal: func2
         }))
     }
 </script>
